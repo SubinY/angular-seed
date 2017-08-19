@@ -1,28 +1,75 @@
-# MyRjrx
+# MyProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.4.
+### 目录结构(cmd tree命令生成)
 
-## Development server
+```html
+        ├─e2e
+        └─src
+        ├─app   
+        │  ├─component  <!--公共组件-->
+        │  ├─modules    <!--模块-->
+        │  │  └─common    <!--公共模块eg：头部-->
+        │  └─shared    <!--公共弹框公共服务等-->
+        ├─assets    <!--静态资源-->
+        │  ├─css
+        │  ├─font-awesome-4.7.0
+        │  │  ├─css
+        │  │  ├─fonts
+        │  │  ├─less
+        │  │  └─scss
+        │  ├─icon    <!--图标资源-->
+        │  ├─images    <!--图片资源-->
+        │  ├─mock-data    <!--前端模拟数据-->
+        │  └─scripts    <!--第三方库-->
+        │      ├─fancybox
+        │      │  └─helpers
+        │      └─jquery
+        ├─config
+        └─environments
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### 基于ng种子文件，样式选用scss
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
++ `ng new my-project -style=scss`
 
-## Build
+[ng配置scss](http://blog.csdn.net/zhaoruda/article/details/72989762)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### 项目依赖配置新增start命令、aot编译命令 、ng依赖包的升级命令
 
-## Running unit tests
+"start": "ng lint && ng serve --port 4200",
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+"build-aot": "node --max_old_space_size=2192 node_modules/@angular/cli/bin/ng build --aot --prod",
+"aot": "ng build --aot --prod",
 
-## Running end-to-end tests
+"update": "npm install @angular/animations @angular/common @angular/compiler @angular/core @angular/forms @angular/http @angular/platform-browser @angular/platform-browser-dynamic @angular/router @angular/compiler-cli"
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+### angular-cli.json手动导入常用的第三方库及样式
 
-## Further help
++ 步骤1：npm i lodash@latest --save
++ 步骤2：angular-cli.json手动导入
++ 步骤3：在typings.d.ts文件中全局声明所用到的变量，如JQ：'$'
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+### 更改编码约定tslint，提高代码质量
+
+### 通过npm-check把项目文件依赖全面升级
+
+npm-check为升级依赖方便的插件
++ `npm i -g npm-check`
++ `npm-check -u`
+
+[npm-check](https://github.com/dylang/npm-check)
+
+### 相关文章学习
+
+[初识Angular-cli[官方脚手架]及脱坑要点](http://blog.csdn.net/crper/article/details/62884688)
+
++ e2e	ng e2e	跑自动化测试-自己写测试测试用例
++ test	ng test	跑单元测试 – 自己写
++ lint	ng lint	调用tslint跑整个项目，可以收获一堆警告和错误，–force –fix –format可以帮助格式和修复部分问题
+
+![生成的目录树小解释](http://img.blog.csdn.net/20170317113912130?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY3JwZXI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast) 
+
+
+

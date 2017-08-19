@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "my-rjrx"
+    "name": "my-project"
   },
   "apps": [
     {
@@ -9,6 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
+        "config",
         "favicon.ico"
       ],
       "index": "index.html",
@@ -19,9 +20,16 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "./assets/font-awesome-4.7.0/scss/font-awesome.scss",
+        "./assets/scripts/fancybox/jquery.fancybox.css",
         "styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "assets/scripts/jquery/jquery-2.1.3.js",
+        "../node_modules/lodash/lodash.js",
+        "assets/scripts/fancybox/jquery.fancybox.js",
+        "../node_modules/eventproxy/lib/eventproxy.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

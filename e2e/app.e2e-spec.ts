@@ -1,10 +1,10 @@
-import { MyRjrxPage } from './app.po';
+import { MyProjectPage } from './app.po';
 
-describe('my-rjrx App', () => {
-  let page: MyRjrxPage;
+describe('my-project App', () => {
+  let page: MyProjectPage;
 
   beforeEach(() => {
-    page = new MyRjrxPage();
+    page = new MyProjectPage();
   });
 
   it('should display welcome message', () => {
