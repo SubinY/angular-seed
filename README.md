@@ -61,6 +61,8 @@ npm-check为升级依赖方便的插件
 
 [npm-check](https://github.com/dylang/npm-check)
 
+### 新增栅格样式grid.scss
+
 ### 相关文章学习
 
 [初识Angular-cli[官方脚手架]及脱坑要点](http://blog.csdn.net/crper/article/details/62884688)
