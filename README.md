@@ -1,33 +1,4 @@
-# MyProject
-
-### 目录结构(cmd tree命令生成)
-
-```html
-        ├─e2e
-        └─src
-        ├─app   
-        │  ├─component  <!--公共组件-->
-        │  ├─modules    <!--模块-->
-        │  │  └─common    <!--公共模块eg：头部-->
-        │  └─shared    <!--公共弹框公共服务等-->
-        ├─assets    <!--静态资源-->
-        │  ├─css
-        │  ├─font-awesome-4.7.0
-        │  │  ├─css
-        │  │  ├─fonts
-        │  │  ├─less
-        │  │  └─scss
-        │  ├─icon    <!--图标资源-->
-        │  ├─images    <!--图片资源-->
-        │  ├─mock-data    <!--前端模拟数据-->
-        │  └─scripts    <!--第三方库-->
-        │      ├─fancybox
-        │      │  └─helpers
-        │      └─jquery
-        ├─config
-        └─environments
-```
-
+# 动态组件做单页应用（无路由）
 
 ### 基于ng种子文件，样式选用scss
 

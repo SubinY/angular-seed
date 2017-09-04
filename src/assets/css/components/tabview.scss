@@ -1,0 +1,104 @@
+
+.tab-view {
+    height: 100%;
+    .ui-widget-header {
+        // border: none;
+    }
+    .ui-tabview {
+        padding: 0px;
+        height: 100%;
+        margin: 0 auto;
+        
+        .ui-tabview-nav {
+            width: 84%;
+            // border-bottom: 1px solid #E1E3E7;
+            background-color: transparent;
+            position: fixed;
+            top: 32px;
+            left: 183px;
+            border: 0;
+
+            @for $i from 1 to 20 {
+                li:nth-child(#{$i}) {
+                    left: -8px * $i;
+                }
+            }
+
+            li {
+                margin: 0px;
+                width: 132px;
+                height: 38px;
+                border-top: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 28px solid #2C83E0;
+                border-left: 10px solid transparent;
+                position: relative;
+                display: inline-block;
+                &:hover {
+                    border-color: transparent;
+                }
+            }
+            li.ui-state-default {
+                background-color: transparent;
+                a {
+                    position: absolute;
+                    left: 5px;
+                    overflow: hidden;
+                    padding: 0.5em 0;
+                    width: 67%;
+                }
+                span {
+                    color: rgba(255, 255, 255, 0.6)
+                }
+                &:hover {
+                    background-color: transparent;
+                    border-color: transparent;
+                    border-bottom: 28px solid #fff;
+                    z-index: 10;
+                    span {
+                        color: #4DA3FD;
+                    }
+                }
+                .ui-tabview-close {
+                    float: right;
+                    position: relative;
+                    z-index: 100;
+                }
+            }
+            li.ui-state-active {
+                background-color: transparent;
+                border-bottom: 28px solid #fff;
+                position: relative;
+                z-index: 10;
+                span {
+                    color: #4DA3FD;
+                }
+            }
+            > li.ui-state-active {
+                // border: 1px solid #E1E3E7 !important;
+                // border-bottom: none !important;
+            }
+
+            > li.ui-state-default {
+                // border: none;
+            }
+        }
+    }
+    .ui-tabview.ui-tabview-top > .ui-tabview-nav {
+        padding: 0px;
+    }
+    .ui-corner-all, .ui-corner-top {
+        border-radius: 0px;
+    }
+    //#EFF2F8
+    .ui-tabview .ui-tabview-panel {
+        background: #eee;
+        padding: 0;
+        height: 100%;
+
+    }
+
+    .ui-tabview-panels {
+        height: 100%;
+    }
+}

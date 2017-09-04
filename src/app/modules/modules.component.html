@@ -1,0 +1,13 @@
+<div id="main-header">
+    <header-top [widthSpread]="widthSpread" (widthChange)="widthChange($event)" (gotoPerson)="navPerson($event)"
+                (headerHome)="headerHome($event)" (selectSubMenu)="changeSubMenu($event)"
+                (personalCenter)="menuClickHandler($event)" (gotoYujing)="menuClickHandler($event)"></header-top>
+    <app-navigation-menu [widthSpread]="widthSpread" [menuData]="navigateInfo"
+                         (menuClickHandler)="menuClickHandler($event)"></app-navigation-menu>
+</div>
+<div id="main-con" [ngStyle]="setContentStyle()">
+    <div class="tab-view">
+        <ui-tabview #tabview [tabs]="tabs" [activeIndex]="tabActiveIndex"
+                    (tabClose)="handlerTabClose($event)" (tabChange)="handleTabChange($event)"></ui-tabview>
+    </div>
+</div>

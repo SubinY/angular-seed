@@ -1,0 +1,276 @@
+
+@mixin btn-search-clean {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    vertical-align: top;
+    display: inline-block;
+    cursor: pointer;
+}
+@mixin business-btn($x,$y){
+    background: url("/assets/images/common/operation.png") no-repeat $x $y;
+    background-size: 122px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    vertical-align: sub;
+}
+/**
+    <button class="btn-primary">查询</button>
+ */
+.btn-primary {
+    @include btn-search-clean;
+    background-color: $search-button-color;
+    border-radius: 3px;
+    color: $color-font-white;
+    cursor:point;
+    &:hover {
+        background: $color-button-hover;
+    }
+}
+
+/**
+    <button class="clear-btn">清空</button>
+ */
+.btn-default {
+    @include btn-search-clean;
+    color: #666;
+    border: $border-slim;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    vertical-align: top;
+    margin-left: 15px;
+    margin-right: 15px;
+    &:hover {
+        background: $color-white;
+    }
+}
+
+/**
+    异常反馈按钮
+    <div class="abnormal-feedback">
+        <span class="circle">+</span>
+        异常反馈
+    </div>
+ */
+.abnormal-feedback {
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    color: $color-font-white;
+    background-color: $color-blue;
+    .circle {
+        display: inline-block;
+        margin-right: 4px;
+        line-height: 10px;
+        text-align: center;
+        font-weight: bolder;
+        font-size: $font-size-16;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        color: $color-font-white;
+        border: 2px solid white;
+    }
+}
+
+
+/**
+* 右侧滑出弹窗关闭按钮
+*/
+.slide-modal-close-btn{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 12px;
+    height: 78px;
+    margin-top: -39px;
+    background: url("/assets/icon/close-modal.png");
+    border: none;
+    outline: none;
+}
+.excel {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    width: 75px;
+    height: 30px;
+    box-sizing: border-box;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    line-height:30px;
+    display: inline-block;
+    background-color: #0d85e4;
+    color: #fff;
+}
+
+/**
+*全系统的操作按钮
+*
+**/
+//查看详情
+.view-detail-btn{
+    @include business-btn(-25px, -25px);
+}
+//添加跟踪信息
+.add-track-btn{
+    @include business-btn(-78px, -98px);
+}
+//打印签收单
+.print-list-btn{
+    @include business-btn(-25px, -25px);
+}
+//预约
+.order-btn{
+    @include business-btn(-26px, -120px);
+}
+//分配师傅
+.dist-master-btn{
+    @include business-btn(-25px, -73px);
+}
+//提货
+.pick-goods-btn{
+    @include business-btn(-50px, -120px);
+}
+//签收
+.sign-btn{
+    @include business-btn(-103px, -74px);
+}
+//取消签收
+.cancel-sign-btn{
+    @include business-btn(-77px, 0);
+}
+//维修完成
+.repair-done-btn{
+    @include business-btn(-51px, -50px);
+}
+//返货完成
+.return-done-btn{
+    @include business-btn(-51px, -50px);
+}
+//取消分配
+.cancel-dist-btn{
+    @include business-btn(-77px, 0);
+}
+//更改提货信息
+.chg-pick-btn{
+    @include business-btn(0, -74px);
+}
+//建立合作
+.coop-btn{
+    @include business-btn(-25px, -74px);
+}
+//修改
+.edit-btn{
+    @include business-btn(0, -74px);
+}
+//解约
+.surrender-btn{
+    @include business-btn(-78px, -74px);
+}
+//停用
+.stop-btn{
+    @include business-btn(-25px, -98px);
+}
+//拉入黑名单
+.black-list-btn{
+    @include business-btn(-25px, 0);
+}
+//启用
+.begin-use-btn{
+    @include business-btn(0, -98px);
+}
+//移入白名单
+.white-list-btn{
+    @include business-btn(-78px, -74px);
+}
+//审核
+.audit-btn {
+    @include business-btn(0, 0);
+}
+@mixin pass-btn($color) {
+    background: $color;
+    width: 100px;
+    height: 50px;
+    color: #fff;
+    border-radius: 7px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+.pass-btn {
+    @include pass-btn($color-blue)
+}
+.pass-failed {
+    @include pass-btn(yellowgreen)
+}
+.pass-quite {
+    @include pass-btn($color-secondary)
+}
+
+/**
+*数据筛选按钮
+**/
+.nav {
+    width: 300px;
+    li {
+        float: left;
+        min-width: 105px;
+    }
+}
+.data-filter-btn {
+    height: 50px;
+    button {
+        width: 100%;
+        border: none;
+        background-color: $color-white;
+        outline: none;
+    }
+    &.active {
+        color: $tab-button-background;
+        border-bottom: 3px solid #147cce;
+    }
+    &:hover {
+        color: $tab-button-background;
+    }
+}
+
+@mixin business-btn(){
+    background-size: 122px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    vertical-align: sub;
+}
+
+/*图标*/
+.change-btn {
+    background: #4DA3FD url('/assets/images/common/xiugai.png') no-repeat;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+}
+.del-btn {
+    background: #4DA3FD url('/assets/images/common/shanchu.png') no-repeat;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+/*第二次点击禁止*/
+button[disabled] {
+    cursor: not-allowed;
+    background-color: $search-button-color;
+}
+
+button:hover {
+    background-color: $search-button-color;
+}
+

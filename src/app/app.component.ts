@@ -6,7 +6,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  title = 'app';
+  title = 'Dynamic Component Loader';
 
   ngOnInit() {
     const ep = new EventProxy()

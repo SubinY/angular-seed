@@ -1,0 +1,101 @@
+/*** 普通对话窗口 ***/
+
+.pop-modal-container {
+    box-shadow: $box-shadow-grey;
+    z-index: z-index("popup");
+    background-color: #fff;
+
+    /**
+    * 弹窗头部
+    */
+    .pop-modal-header {
+        height: 40px;
+        background: $pop-modal-header;
+        padding: 4px 15px;
+        > span {
+            font-size: 16px;
+        }
+        > label {
+            font-size: 16px;
+        }
+        .pop-modal-title {
+            color: $color-white;
+            line-height: 33px;
+            float: left;
+            &:before {
+                content: '';
+                width: 20px;
+                height: 20px;
+                position: relative;
+                display: inline-block;
+                top: 5px;
+                left: -5px;
+                // background: url(/assets/images/common/dd.png) 20px center;
+                opacity: 0.7;
+            }
+        }
+        .close-icon {
+            float: right;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0.7;
+            line-height: 40px;
+            color: $color-white;
+        }
+    }
+
+    /**
+    * 弹窗主体
+    */
+    .pop-modal-body {
+        // padding: 15px;
+        //border-bottom: $border-light;
+        background: $color-white;
+        // 普通弹框
+        .normal {
+            background-color: $pop-modal-bgc;
+            margin-bottom: 10px;
+            padding: 8px 10px;
+            >span, >label {
+                color: $pop-modal-font;
+            }
+            >div {
+                >span, >label {
+                    color: $pop-modal-font;
+                }
+                > em {
+                    font-style: normal;
+                    color: #fff;
+                }
+            }
+        }
+        // 订单管理类型
+        .body-header {
+            background-color: $pop-modal-bgc;
+            margin-bottom: 10px;
+        }
+        .content-wrap {
+            margin: 0 10px;
+            padding: 8px 0;
+            >div {
+                width: 24%;
+                min-height: 20px;
+                display: inline-block;
+                text-align: left;
+                vertical-align: top;
+            }
+            label {
+                color: $pop-modal-font;
+            }
+        }
+    }
+
+    /**
+    * 弹窗底部
+    */
+    .pop-modal-footer {
+        padding: 15px 0;
+        text-align: right;
+        background: $color-white;
+    }
+}

@@ -1,0 +1,16 @@
+<ul class="navigation" id="home_navigation">
+    <li *ngFor="let data of menuData;let i = index" [class.click]="isTopMenuClick[i]" class="clearfix">
+        <span (click)="showPanel($event, i, data)" class="second-menu" [class.borderR]="isTopMenuClick[i]">
+            <i [class.icon]="i===0" *ngIf="!isBus"></i>
+            <s [class.icon]="i===0" *ngIf="isBus"></s>
+             {{data.name}}
+         </span>
+        <ul>
+            <li *ngFor="let menu of data.children;let i = index" [class.cur_click]="isMenuClick[i]">
+                <a (click)="menuClick(i,menu)">
+                    {{menu.name}}
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>

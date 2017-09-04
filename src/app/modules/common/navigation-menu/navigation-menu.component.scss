@@ -1,0 +1,179 @@
+@import "../../../../styles";
+@mixin position {
+    content:'';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 8px;
+    top: 9px;
+}
+.navigation {
+    width: 180px;
+    padding-top: 40px;
+    background: #273238;
+    height: 100%;
+    float: left;
+    position: relative;
+
+}
+.navigation > li {
+    cursor: pointer;
+    height: auto;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    &:hover {
+        background: #5C606D;
+    }
+    > span {
+        width: 160px;
+        display: block;
+        border-left: 3px solid #1B262B;
+        height: 40px;
+        color: #787D86;
+        position: relative;
+        box-sizing: border-box;
+        padding: 0 30px;
+        padding-right: 10px;
+        font-size: 14px;
+    }
+    > ul {
+        height: 0;
+        overflow: hidden;
+        transition: all 0.4s ;
+        a {
+            display: block;
+            height: 100%;
+        }
+    }
+    > i {
+        border: 1px solid #fff {
+            left: none;
+            bottom: none;
+        }
+        transition: all 0.4s;
+        float: right;
+        transform:rotate(45deg);
+        height: 5px;
+        width: 5px;
+        margin: 17px 20px 0 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+.navigation > li > span {
+   &:hover{
+       color:#fff;
+    }
+
+}
+.navigation > li > ul > li {
+    //background: $color-second-menu;
+    background: #1B262B;
+    &:hover {
+        background: #5C606D;
+    }
+}
+.navigation > li > ul > li> a {
+    color: #787D86;
+}
+.navigation > li > ul > li> a:hover {
+    color: #fff;
+}
+.navigation > li > ul > li.cur_click {
+    background: #1B262B;
+}
+.navigation > li > ul > li.cur_click>a{
+    color: #46A1FF;
+}
+.navigation > li.click {
+    background: #3B4257;
+}
+.navigation > li > span.borderR {
+    border-left: 3px solid #46A1FF;
+}
+.navigation > li.click> span {
+    color:#46A1FF;
+}
+.navigation > li > i.star {
+    transform: rotate(135deg)
+}
+//url('/assets/images/common/bookb.png') no-repeat center
+.navigation>li:nth-child(1)>span > i{
+    @include position;
+    left: 18px;
+    background: url('/assets/images/common/dd.png') no-repeat center ;
+}
+.navigation>li:nth-child(1)>span > i.icon{
+    background: url('/assets/images/common/bookb.png') no-repeat 1px 1px ;
+}
+.navigation>li:nth-child(2)>span > i{
+    @include position;
+    left: 14px;
+    background: url('/assets/images/common/kucun.png') no-repeat center;
+}
+.navigation>li:nth-child(2)>span > i.icon{
+    @include position;
+    left: 14px;
+    background: url('/assets/images/common/kucun2.png') no-repeat center;
+}
+.navigation>li:nth-child(3)>span > i{
+    @include position;
+    left: 14px;
+    background: url('/assets/images/common/kch.png') no-repeat center;
+}
+.navigation>li:nth-child(3)>span > i.icon{
+    @include position;
+    left: 14px;
+    background: url('/assets/images/common/xxx.png') no-repeat center;
+}
+.navigation>li:nth-child(4)>span > i{
+    @include position;
+    left: 14px;
+    background: url('/assets/images/common/pp.png') no-repeat center;
+}
+.navigation>li:nth-child(4)>span > i.icon{
+    @include position;
+    left: 14px;
+    background: url('/assets/images/common/kehu.png') no-repeat center;
+}
+//
+.navigation>li:nth-child(1)>span > s{
+    @include position;
+    left: 18px;
+    background: url('/assets/images/common/dd.png') no-repeat center ;
+}
+.navigation>li:nth-child(1)>span > s.icon{
+    background: url('/assets/images/common/bookb.png') no-repeat 1px 1px ;
+}
+.navigation>li:nth-child(2)>span > s{
+    @include position;
+    left: 14px;
+    background: url('/assets/images/common/che2.png') no-repeat center;
+}
+.navigation>li:nth-child(2)>span > s.icon{
+    @include position;
+    left: 14px;
+    background: url('/assets/images/common/shoe.png') no-repeat center;
+}
+.navigation>li:nth-child(3)>span > s{
+    @include position;
+    left: 14px;
+    background: url('/assets/images/common/kucun.png') no-repeat center;
+}
+.navigation>li:nth-child(3)>span > s.icon{
+    @include position;
+    left: 14px;
+    background: url('/assets/images/common/kucun2.png') no-repeat center;
+}
+.navigation>li:nth-child(4)>span > s{
+    @include position;
+    left: 14px;
+    background: url('/assets/images/common/kch.png') no-repeat center;
+}
+.navigation>li:nth-child(4)>span > s.icon{
+    @include position;
+    left: 14px;
+    background: url('/assets/images/common/xxx.png') no-repeat center;
+}

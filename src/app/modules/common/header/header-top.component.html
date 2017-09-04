@@ -1,0 +1,54 @@
+<div id="header-top" class="header-top">
+    <nav class="nav">
+        <h1 style="transform: translate(90px, 24px) scale(1.5); color: #fff;">SuBinY</h1>
+        <!--<i class="company-logo" style="margin-top: 22px;"></i>-->
+        <!--<i id="pull-down-menu"  class="pull-down-menu" (click)="menuWidthChange()"></i>-->
+        <!--<i  id="come-back-home" class="come-back-home" (click)="gotoHome()"></i>-->
+    </nav>
+    <!--登录部分-->
+    <div class="header-right" id="header-right" style="margin-top: 22px">
+        <!--<div class="header-right-info">
+          <i></i>
+          <span>1</span>
+        </div>-->
+        <div class="header-right-portrait" *ngIf="username" (mouseover)="showUserMode()" style="width: 60px;text-align: center;height: 50px">
+            <span class="username">{{username}}</span>
+            <i></i>
+            <!--<div class="protrait-img">
+                <img [src]="portraitUrl">
+                &lt;!&ndash;<i [style.backgroundColor]="userModeBg"></i>&ndash;&gt;
+            </div>-->
+        </div>
+        <div class="header-right-portrait" *ngIf="!username" (mouseover)="showUserMode()">
+            <!--<span class="login"> <a title="点击注册" href="/security/login">注册</a> &nbsp;|&nbsp; <a title="点击登陆" href="/security/login">登陆</a></span>-->
+            <span class="login"><a title="点击登陆" href="/security" style="color: #fff;display: block;">未登录</a></span>
+        </div>
+    </div>
+    <div class="yujing" (click)="goYujing()">
+        <div class="icon" *ngIf="warnInfoNum !== 0">
+            {{warnInfoNum}}
+        </div>
+        <!--<div class="info">
+            <div>
+                库存货物预警({{warnInfoNum}})
+            </div>
+        </div>-->
+    </div>
+</div>
+<!--<menu-bar [widthSpread]="widthSpread"></menu-bar>-->
+
+<!-- 头像下拉框 -->
+<div [hidden]="!userModeDisplay" class="user-mode" (mouseout)="hideUserMode()" (mousemove)="showUserMode()">
+    <div class="header-right-portrait">
+        <span style="line-height: 14px">{{username}}</span>
+        <i></i>
+        <!--<div class="protrait-img">
+            <img [src]="portraitUrl">
+            <i [style.backgroundColor]="userModeBg"></i>
+        </div>-->
+    </div>
+    <ul class="user-mode-choice">
+        <li (click)="gotoPersonal()" *ngIf="isCustomer">个人中心</li>
+        <li><a href="javascript:void(0);" (click)="doLogout()">退出</a></li>
+    </ul>
+</div>
